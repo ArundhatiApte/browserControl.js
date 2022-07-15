@@ -1,0 +1,28 @@
+{
+  "name": "browserControl",
+  "main": "./src/server/exports/launcher.js",
+  "private": true,
+  "exports": {
+    ".": "./src/server/exports/launcher.js",
+    "./RemoteError": "./src/server/exports/RemoteError.js"
+  },
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "minify-json": "^1.0.0",
+    "mocha": "9.1.2",
+    "prettier": "2.5.1",
+    "tester": "https://github.com/ArundhatiApte/Tester.js/releases/download/v0.1.0/tester.package.tar.gz",
+    "webpack": "5.68.0",
+    "webpack-cli": "4.9.2",
+    "ws": "^8.5.0"
+  },
+  "dependencies": {
+    "createEnum": "github:ArundhatiApte/createEnum-JS",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.4.0"
+  },
+  "scripts": {
+    "test": "npx mocha './src/**/test*.js' --recursive --no-color",
+    "checkCode": "npx prettier --check --config configs/formattingCode.json 'src/**/*.*(js|json|html)'",
+    "beautifyCode": "npx prettier --write--config configs/formattingCode.json 'src/**/*.*(js|json|html)'"
+  }
+}

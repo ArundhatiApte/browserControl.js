@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "browseControl",
+  "description": "browseControl",
+
+  "version": "0.1.0",
+
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "browserSettings",
+    "cookies",
+    "privacy",
+    "proxy",
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+
+  "options_ui": {
+    "page": "/settings/settings.html",
+    "chrome_style": true,
+    "open_in_tab": true
+  },
+
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "/background/main.js"
+    ]
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "browserControl@client.ext"
+    }
+  },
+  "content_security_policy": "default-src 'self'"
+}

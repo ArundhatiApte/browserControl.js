@@ -1,0 +1,4 @@
+project/node_modules
+project/building/clientExtension/extension
+project/building/clientExtension/browserControl.xpi
+project/building/npmPackage/browserControl.package.tar.gz
