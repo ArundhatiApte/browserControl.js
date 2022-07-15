@@ -17,10 +17,10 @@ Chromium, Edge и Opera реализуют API [WebExtensions], основанн
 [webextension-polyfill](https://github.com/mozilla/webextension-polyfill), представляющий интерфейс,
 методы которого возвращают Promise, основанный на объекте browser. Указанный скрипт требуется запустить раньше
 основного кода дополнения, добавив сценарий в папку
-[background](project/src/clientExtension/background),
-указав ссылку в [manifest.json](project/src/clientExtension/manifest.json).
+[background](/project/src/clientExtension/background),
+указав ссылку в [manifest.json](/project/src/clientExtension/manifest.json).
 
 Firefox использует xpi файлы для расширений, Chromium - crx. Поэтому требуется изменить сценарий сборки клиентского
-дополнения [createExtension.sh](project/building/clientExtension/createExtension.sh).
+дополнения [createExtension.sh](/project/building/clientExtension/createExtension.sh).
 
 [WebExtensions]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions

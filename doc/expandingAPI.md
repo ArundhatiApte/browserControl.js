@@ -2,7 +2,7 @@
 
 Внутренне в системе browserControl сервер передаёт запросы на вызов методов клиенту, отправляющему ответы и сообщения
 о событиях. Экспортируемый браузером API можно расширить, изменив описание интерфейса, находящегося в файле
-[descriptionOfBrowserExportedApi.js](project/src/clientExtension/background/descriptionOfBrowserExportedApi.js),
+[descriptionOfBrowserExportedApi.js](/project/src/clientExtension/background/descriptionOfBrowserExportedApi.js),
 предоставляющее собой структуру, состоящую из дескрипторов методов и событий.
 Пример описания API:
 

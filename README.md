@@ -135,9 +135,9 @@ import RemoteBrowserError from "browserControl/RemoteError";
 
 ## Ссылки
 
-* [Документация об API](doc/API.md)
-* [Расширение API браузера и создание дополнений](doc/expandingAPI.md)
-* [Использование дополнения в других браузерах](doc/usageWithOtherBrowsers.md)
+* [Документация об API](/doc/API.md)
+* [Расширение API браузера и создание дополнений](/doc/expandingAPI.md)
+* [Использование дополнения в других браузерах](/doc/usageWithOtherBrowsers.md)
 
 ## Лицензия
 
