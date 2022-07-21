@@ -77,7 +77,7 @@ const description = {
     * `hasListener(listener: function) => boolean`
     * `removeListener(listener: function) => void`
 Параметры, передаваемые обработчику при возникновении события должны быть представляемые в формате json
-(Большинство событий [WebExtensions] соответсвуют данному требованию).
+(Большинство событий [WebExtensions] соответствуют данному требованию).
 Пример: [browser.tabs.onCreated](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/onCreated)
 * `isEvent: boolean` Задаёт тип события. Равно истине
 * `isInteractive: boolean` Показывает является ли событие интерактивным. Примером такого события является
