@@ -9,12 +9,12 @@
 Система состоит из модуля для node.js и расширения браузера.
 Перед сборкой необходимо установить зависимости, выполнив `npm install` в папке project.
 
-Для установи серверной части требуется создать npm пакет, перейдя в каталог project/building/npmPackage,
+Для установи серверной части требуется создать npm пакет, перейдя в каталог project/building/npmPackage/,
 и выполнить скрипт оболочки createNpmPackage.sh. После в данной папке появится файл browserControl.package.tar.xz,
 который можно установить в другом модуле менеджером пакетов командой `npm install path/to/browserControlPackage`.
 
 Для установки клиентской части - расширения браузера, требуется создать файл дополнения xpi,
-перейдя в каталог project/building/clientExtension, и выполнить скрипт оболочки createExtension.sh.
+перейдя в каталог project/building/clientExtension/, и выполнить скрипт оболочки createExtension.sh.
 После в данной папке появится файл browserControl.xpi. Затем установить собранное расширение в браузер.
 Перед этим требуется проверить свойство xpinstall.signatures.required,
 управляющее установкой дополнений без цифровых подписей mozilla, запустив веб-обозреватель,
@@ -25,23 +25,27 @@
 ### Пример:
 
 ```js
-"use strict";
-
 import launcher from "browserControl";
 
 (async function() {
   const browser = await launcher.launch("path/to/browser/or/command");
-  const tabs = browser.tabs;
 
-  let {id: tabId} = await tabs.create();
+  await browser.proxy.settings.set({
+    value: {
+      proxyDNS: true,
+      socks: "socks5://123.45.67.89:1011"
+    }
+  });
 
   await browser.webNavigation.onCompleted.addListener(function(details) {
     console.log("Загружена вкладка: ", details.url);
   });
+  const tabs = browser.tabs;
 
-  await tabs.update(tabId, {
+  const tabId = (await tabs.create({
     url: "https://codernet.ru"
-  });
+  })).id;
+
   const resultsFromFrames = await tabs.executeScript(tabId, {
     code: "'do something in tab'",
     runAt: "document_idle"
@@ -54,12 +58,12 @@ import launcher from "browserControl";
 
 ### Асинхронность
 
-Все методы интерфейсов WebExtensions являются асинхронными, возвращают Promise,
+Все методы интерфейсов [WebExtensions] являются асинхронными, возвращают Promise,
 включая методы объектов событий (addListener, removeListener, hasListener).
 
 ### События
 
-API WebExtensions предоставляет информационные события (например, browser.tabs.onRemoved) и интерактивные.
+API [WebExtensions] предоставляет информационные события (например, browser.tabs.onRemoved) и интерактивные.
 Примером второго является browser.runtime.onMessage,
 обработчик которого может отправить ответ на входящее сообщение.
 BrowserControl может устанавливать два вида обработчиков для интерактивных событий:
@@ -125,7 +129,7 @@ import RemoteBrowserError from "browserControl/RemoteError";
 
 ## Запуск тестов
 
-Процессу тестирования необходимо наличие зависимостей, устанавливаемых командой `npm install` в папке project.
+Процессу тестирования необходимо наличие зависимостей, устанавливаемых командой `npm install` в папке project/.
 Для проверки модулей требуется открыть оболочку и выполнить `npm test`.
 
 В папке project/src/tests/checkBrowserControl/ находится js скрипт, тестирующий систему целиком.
