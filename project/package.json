@@ -17,7 +17,7 @@
     "ws": "^8.5.0"
   },
   "dependencies": {
-    "createEnum": "github:ArundhatiApte/createEnum-JS",
+    "createEnum": "https://github.com/ArundhatiApte/create-enum-js/releases/download/v0.1.0/createEnum.package.tar.gz",
     "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.4.0"
   },
   "scripts": {
