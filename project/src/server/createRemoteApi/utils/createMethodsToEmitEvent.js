@@ -6,7 +6,7 @@ const {
     listenerId: symbolsOfEvent_listenerId,
     args: symbolsOfEvent_args
   }
-} = require("./../../../common/ControllingSockets/ControllingSide/ControllingSide");
+} = require("./../../../common/ControlSockets/ControllingSide/ControllingSide");
 
 const {
   TimeoutToReceiveResponseFromListenerError,

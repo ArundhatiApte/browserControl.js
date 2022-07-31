@@ -5,7 +5,7 @@ const {
   deepStrictEqual: expectDeepEqual
 } = require("assert");
 
-const isItNaN = require("./../../../../../valueView/modules/isItNaN/isItNaN");
+const isItNaN = require("./../../../../common/valueView/modules/isItNaN/isItNaN");
 
 const testResponses = function(serverMessanger, clientMessanger) {
   const responses = [null, 0, "str\u1234\u4567", {obj: 1}, [1, 2], NaN, ""];

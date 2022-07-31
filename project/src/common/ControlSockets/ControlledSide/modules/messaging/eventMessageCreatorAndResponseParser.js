@@ -5,7 +5,7 @@ const eventHeader = require("./../../../common/messagesHeaders").events.clientHe
 const {
   parse: valueView_parse,
   bytiefy: valueView_bytiefy
-} = require("./../../../../valueView/valueView");
+} = require("./../../../common/valueView/valueView");
 
 const eventMessanger = {
   createEventMessage(sizeOfHeader, eventId, listenerId, args) {

@@ -7,8 +7,8 @@ const {
 
 const areDeepEqual = require("util").isDeepStrictEqual;
 
-const ControllingSide = require("./../../../../../../common/ControllingSockets/ControllingSide/ControllingSide");
-const ControlledSide = require("./../../../../../../common/ControllingSockets/ControlledSide/ControlledSide");
+const ControllingSide = require("./../../../../../../common/ControlSockets/ControllingSide/ControllingSide");
+const ControlledSide = require("./../../../../../../common/ControlSockets/ControlledSide/ControlledSide");
 
 const {
   eventId: symbolsOfEvent_eventId,

@@ -5,7 +5,7 @@ const {
   deepStrictEqual: expectDeepEqual
 } = require("assert");
 
-const { addTestsFromTable } = require("./../../tests/utils/addingTestsFromTable");
+const { addTestsFromTable } = require("./../../../../tests/utils/addingTestsFromTable");
 
 const isItNaN = require("./modules/isItNaN/isItNaN");
 

@@ -5,7 +5,7 @@ const messagesHeaders = require("./../../../common/messagesHeaders");
 const {
   parse: valueView_parse,
   bytiefy: valueView_bytiefy
-} = require("./../../../../valueView/valueView");
+} = require("./../../../common/valueView/valueView");
 
 const symbolsOfEvent_eventId = Symbol();
 const symbolsOfEvent_listenerId = Symbol();

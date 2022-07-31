@@ -5,7 +5,7 @@ const headersOfResponse = require("./../../../common/messagesHeaders").invoking.
 const {
   parse: valueView_parse,
   bytiefy: valueView_bytiefy
-} = require("./../../../../valueView/valueView");
+} = require("./../../../common/valueView/valueView");
 
 const headersOfResponses_succes = headersOfResponse.succes;
 const headersOfResponse_error = headersOfResponse.error;

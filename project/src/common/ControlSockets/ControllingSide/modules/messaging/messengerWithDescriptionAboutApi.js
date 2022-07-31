@@ -1,6 +1,6 @@
 "use strcit";
 
-const valueView_parse = require("./../../../../valueView/valueView").parse;
+const valueView_parse = require("./../../../common/valueView/valueView").parse;
 
 const messenger = {
   parseMessageAboutApiDescription(bytesMessage, startIndex) {

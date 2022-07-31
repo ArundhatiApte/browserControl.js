@@ -1,6 +1,6 @@
 "use strict";
 
-const valueView_bytiefy = require("./../../../../valueView/valueView").bytiefy;
+const valueView_bytiefy = require("./../../../common/valueView/valueView").bytiefy;
 const header = require("./../../../common/messagesHeaders").descriptionAboutApi.clientHeader;
 
 const messager = {

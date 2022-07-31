@@ -6,7 +6,7 @@ const FakeResponsiveWebSocketClient = require("./utils/FakeResponsiveWebSockets/
 const ControllingServer = require("./../server/ControllingServer/ControllingServer");
 const ControlledClient = require("./../clientExtension/background/ControlledSocketClient/ControlledSocketClient");
 
-const executeTests = require("./../common/ControllingSockets/tests/tests/executeTests");
+const executeTests = require("./../common/ControlSockets/tests/tests/executeTests");
 
 const createControllingAndControlledSides = function() {
   return new Promise(function(resolve, reject) {

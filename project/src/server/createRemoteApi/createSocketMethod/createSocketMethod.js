@@ -18,7 +18,7 @@ const {
     errorStack: symbolsOfResponseOnInvokingMessage_errorStack
   }
 } = require(
-  "./../../../common/ControllingSockets/ControllingSide/ControllingSide"
+  "./../../../common/ControlSockets/ControllingSide/ControllingSide"
 );
 
 const createSocketMethod = function(controllingConnection, objId, methodId, isReturning) {

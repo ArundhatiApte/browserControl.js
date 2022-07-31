@@ -5,7 +5,7 @@ const invokingMessagesHeaders = require("./../../../common/messagesHeaders").inv
 const {
   bytiefy: valueView_bytiefy,
   parse: valueView_parse
-} = require("./../../../../valueView/valueView");
+} = require("./../../../common/valueView/valueView");
 
 const symbolsOfInvokingMessage_objectId = Symbol();
 const symbolsOfInvokingMessage_methodId = Symbol();

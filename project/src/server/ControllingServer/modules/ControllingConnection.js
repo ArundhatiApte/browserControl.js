@@ -1,6 +1,6 @@
 "use strict";
 
-const ControllingSide = require("./../../../common/ControllingSockets/ControllingSide/ControllingSide");
+const ControllingSide = require("./../../../common/ControlSockets/ControllingSide/ControllingSide");
 
 const {
   _connection

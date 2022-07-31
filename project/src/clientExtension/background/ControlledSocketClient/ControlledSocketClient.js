@@ -3,7 +3,7 @@
 const ResponsiveWebSocketClient = require(
   "./../../../common/ResponsiveWebSockets/Client/ResponsiveWebSocketClient"
 );
-const ControlledSide = require("./../../../common/ControllingSockets/ControlledSide/ControlledSide");
+const ControlledSide = require("./../../../common/ControlSockets/ControlledSide/ControlledSide");
 
 const { _connection } = ControlledSide._namesOfProtectedProperties;
 
